@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title></title>
+  </head>
+  <body>
+    <div class="general_container">
+
+      <!-- Header -->
+      <header>
+        <h1>Todos List</h1>
+
+        <!-- input bar -->
+        <div class="input_bar">
+          <input type="text" placeholder="what do you have to do?">
+          <button type="button" name="button">Create</button>
+        </div>
+        <!-- end input bar -->
+
+      </header>
+      <!-- Header -->
+
+      <!-- Main -->
+      <main>
+        <!-- todos list -->
+        <ul class="todos_list"></ul>
+        <!-- end todos list -->
+      </main>
+      <!-- end Main -->
+
+    </div>
+
+    <!-- Handlebars -->
+    <script id="todos-template" type="text/x-handlebars-template">
+
+      <!-- todos item {{id}} -->
+      <li class="todos_item">
+        <div class="todos_box">
+          <div class="body">{{text}}</div>
+          <button type="button" name="button">Delete</button>
+        </div>
+      </li>
+      <!-- end todos item -->
+
+    </script>
+    <!-- end Handlebars -->
+
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>
