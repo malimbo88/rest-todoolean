@@ -13,5 +13,29 @@ $(document).ready(function() {
   var myPort = 3033
   var baseUrl = " http://157.230.17.132:" + myPort + "/todos/"
 
+  //ajax
+  $.ajax(
+    {
+      url: baseUrl,
+      method: "GET",
+      success: function (dataSuccess) {
+        todosPrint (dataSuccess)
+      },
+      error: function () {
+        alert("Error")
+      }
+    }
+  );
+  //end ajax
+
+  function todosPrint (dataArray) {
+    var source = $("#todos-template").html();
+    var template = Handlebars.compile(source);
+
+    for (var count = 0; count < dataArray.length; count++) {
+      var html = template(dataArray[count]);
+      $(".todos_list").append(html)
+    }
+  }
 });
 //end jquery
