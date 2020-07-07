@@ -18,8 +18,8 @@
 
         <!-- input bar -->
         <div class="input_bar">
-          <input type="text" placeholder="what do you have to do?">
-          <button type="button" name="button">Create</button>
+          <input id="input_text" type="text" placeholder="what do you have to do?">
+          <button id="btn_create" type="button" name="button">Create</button>
         </div>
         <!-- end input bar -->
 
@@ -42,7 +42,8 @@
       <!-- todos item {{id}} -->
       <li data-id="{{id}}" class="todos_item">
         <div class="todos_box">
-          <div class="body">{{text}}</div>
+          <span class="todos_text">{{number}}</span>
+          <span class="todos_text">{{text}}</span>
           <button type="button" name="button">Delete</button>
         </div>
       </li>
